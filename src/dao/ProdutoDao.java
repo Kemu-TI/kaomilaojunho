@@ -42,9 +42,9 @@ public class ProdutoDao extends AbstractDao {
             pst.setString(6, cad.getValidade());
             pst.setString(7, cad.getFabricante());
             pst.setString(8, cad.getCnpj());
-            pst.setDouble(9, cad.getEstoque());
-            pst.setDouble(10, cad.getVlr_fornecedor());
-            pst.setDouble(11, cad.getVlr_venda());
+            pst.setInt(9, cad.getEstoque());
+            pst.setInt(10, cad.getVlr_fornecedor());
+            pst.setInt(11, cad.getVlr_venda());
             pst.setInt(12, cad.getMat_usuario());
             pst.execute();
             JOptionPane.showMessageDialog(null, "Produto Cadastrado com sucesso!!");
@@ -72,9 +72,9 @@ public class ProdutoDao extends AbstractDao {
             pst.setString(6, alterar.getValidade());
             pst.setString(7, alterar.getFabricante());
             pst.setString(8, alterar.getCnpj());
-            pst.setDouble(9, alterar.getEstoque());
-            pst.setDouble(10, alterar.getVlr_fornecedor());
-            pst.setDouble(11, alterar.getVlr_venda());
+            pst.setInt(9, alterar.getEstoque());
+            pst.setInt(10, alterar.getVlr_fornecedor());
+            pst.setInt(11, alterar.getVlr_venda());
             pst.setInt(12, alterar.getMat_usuario());
             pst.setString(13, alterar.getNome());
             pst.executeUpdate();
@@ -96,7 +96,7 @@ public class ProdutoDao extends AbstractDao {
                pst.setString(1, nome);
                rs = pst.executeQuery();
                if(rs.next()){
-            return new Produto(rs.getInt("codigo"), rs.getString("categoria"), rs.getString("nome_produto"),rs.getString("descricao"), rs.getString("data_fabricacao"), rs.getString("validade"),rs.getString("nome_fabricante"),rs.getString("cnpj"),rs.getDouble("qtd_estoque"), rs.getDouble("vlr_fornecedor"), rs.getDouble("vlr_venda"), rs.getInt("mat_usuario"));
+            return new Produto(rs.getInt("codigo"), rs.getString("categoria"), rs.getString("nome_produto"),rs.getString("descricao"), rs.getString("data_fabricacao"), rs.getString("validade"),rs.getString("nome_fabricante"),rs.getString("cnpj"),rs.getInt("qtd_estoque"), rs.getInt("vlr_fornecedor"), rs.getInt("vlr_venda"), rs.getInt("mat_usuario"));
            
                }else{
                    return null;

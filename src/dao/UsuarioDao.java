@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dao;
 
 import model.Usuario;
@@ -91,7 +87,7 @@ public class UsuarioDao extends AbstractDao {
     public void Excluir(Usuario excluir) {
         conex.conexao();
         try {
-            PreparedStatement pst = conex.con.prepareStatement("delete from cad_user where mat=?");
+            PreparedStatement pst = conex.con.prepareStatement("delete from cad_user where nome=?");
             pst.setInt(1, excluir.getMatricula());
             pst.execute();
             JOptionPane.showMessageDialog(null, "Dados Excluidos com sucesso!\n");
@@ -101,4 +97,7 @@ public class UsuarioDao extends AbstractDao {
         conex.desconectar();
     }
 
+    
+    
+    
 }

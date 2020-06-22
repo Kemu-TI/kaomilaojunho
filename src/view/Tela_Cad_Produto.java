@@ -285,9 +285,9 @@ public class Tela_Cad_Produto extends javax.swing.JFrame {
         mod.setValidade(jFormattedTextFieldValidade.getText());
         mod.setFabricante(jTextFieldNomeFabr.getText());
         mod.setCnpj(jFormattedTextFieldCnpj.getText());
-        mod.setEstoque(Double.parseDouble(jTextFieldQtd_Estoque.getText()));
-        mod.setVlr_fornecedor(Double.parseDouble(jFormattedTextFieldVlrFornecedor.getText()));
-        mod.setVlr_venda(Double.parseDouble(jFormattedTextFieldVlrVenda.getText()));
+        mod.setEstoque(Integer.parseInt(jTextFieldQtd_Estoque.getText()));
+        mod.setVlr_fornecedor(Integer.parseInt(jFormattedTextFieldVlrFornecedor.getText()));
+        mod.setVlr_venda(Integer.parseInt(jFormattedTextFieldVlrVenda.getText()));
         mod.setMat_usuario(Integer.parseInt(jTextFieldMatUsuario.getText()));
         mod.setCategoria((String) JComboBoxCategoria.getSelectedItem());
 
@@ -328,10 +328,13 @@ public class Tela_Cad_Produto extends javax.swing.JFrame {
        a.setCodigo(flag);
        a.setData(data);
        a.setDescricao(descricao);
-       a.setEstoque(Double.NaN);
+       a.setEstoque(Integer.BYTES);
+               //.NaN);
        a.setFabricante(validade);
-       a.setVlr_fornecedor(Double.MAX_VALUE);
-       a.setVlr_venda(Double.MAX_VALUE);
+       a.setVlr_fornecedor(Integer.MAX_VALUE);
+               //.MAX_VALUE);
+       a.setVlr_venda(Integer.MAX_VALUE);
+               //.MAX_VALUE);
        a.setMat_usuario(flag);
        a.setNome(nome);
  

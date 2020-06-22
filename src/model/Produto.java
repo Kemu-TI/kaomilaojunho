@@ -19,9 +19,9 @@ public class Produto {
     public String validade;
     public String fabricante;
     public String cnpj;
-    public Double estoque;
-    public Double vlr_fornecedor;
-    public Double vlr_venda;
+    public Integer estoque;
+    public Integer vlr_fornecedor;
+    public Integer vlr_venda;
     public Integer mat_usuario;
     
    
@@ -30,7 +30,7 @@ public class Produto {
      
     }
 
-    public Produto(Integer codigo, String categoria, String nome, String descricao, String data, String validade, String fabricante, String cnpj, Double estoque, Double vlr_fornecedor, Double vlr_venda, Integer mat_usuario) {
+    public Produto(Integer codigo, String categoria, String nome, String descricao, String data, String validade, String fabricante, String cnpj, Integer estoque, Integer vlr_fornecedor, Integer vlr_venda, Integer mat_usuario) {
         this.codigo = codigo;
         this.categoria = categoria;
         this.nome = nome;
@@ -109,27 +109,27 @@ public class Produto {
         this.cnpj = cnpj;
     }
 
-    public Double getEstoque() {
+    public Integer getEstoque() {
         return estoque;
     }
 
-    public void setEstoque(Double estoque) {
+    public void setEstoque(Integer estoque) {
         this.estoque = estoque;
     }
 
-    public Double getVlr_fornecedor() {
+    public Integer getVlr_fornecedor() {
         return vlr_fornecedor;
     }
 
-    public void setVlr_fornecedor(Double vlr_fornecedor) {
+    public void setVlr_fornecedor(Integer vlr_fornecedor) {
         this.vlr_fornecedor = vlr_fornecedor;
     }
 
-    public Double getVlr_venda() {
+    public Integer getVlr_venda() {
         return vlr_venda;
     }
 
-    public void setVlr_venda(Double vlr_venda) {
+    public void setVlr_venda(Integer vlr_venda) {
         this.vlr_venda = vlr_venda;
     }
 
